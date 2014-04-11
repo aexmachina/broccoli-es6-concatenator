@@ -1,4 +1,4 @@
-# broccoli-es6-concatenator
+* `.useStrict` (boolean): # broccoli-es6-concatenator
 
 Transpile ES6 modules and concatenate them, recursively including modules
 referenced by `import` statements.
@@ -29,6 +29,7 @@ var applicationJs = compileES6(sourceTree, {
     'ember.js',
   ],
   wrapInEval: true,
+  useStrict: true,
   outputFile: '/assets/application.js'
 });
 ```
@@ -37,3 +38,5 @@ var applicationJs = compileES6(sourceTree, {
 
 * `.wrapInEval` (boolean): Enable or disable wrapping each module in an `eval`
   call with a `//# sourceURL` comment. Defaults to true, though this may change in the future.
+* `.useStrict` (boolean): Whether to add \'use strict\' to each modules.
+  Defaults to true.

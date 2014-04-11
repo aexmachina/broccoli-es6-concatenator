@@ -14,6 +14,7 @@ function ES6Concatenator(inputTree, options) {
 
   this.inputTree = inputTree
 
+  this.useStrict = true;
   for (var key in options) {
     if (options.hasOwnProperty(key)) {
       this[key] = options[key]
@@ -82,7 +83,9 @@ ES6Concatenator.prototype.write = function (readTree, destDir) {
         var cacheObject = self.cache.es6[statsHash]
         if (cacheObject == null) { // cache miss
           var fileContents = fs.readFileSync(fullPath).toString()
-          var compiler = new ES6Transpiler(fileContents, moduleName)
+          var compiler = new ES6Transpiler(fileContents, moduleName, {
+            useStrict: self.useStrict
+          })
           // Resolve relative imports by mutating the compiler's list of import nodes
           for (i = 0; i < compiler.imports.length; i++) {
             var importNode = compiler.imports[i]
