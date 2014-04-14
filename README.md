@@ -1,4 +1,7 @@
-* `.useStrict` (boolean): # broccoli-es6-concatenator
+# broccoli-es6-concatenator
+
+This fork uses [es6-grubby-module-transpiler](https://github.com/aexmachina/es6-grubby-module-transpiler]
+so that we can disable `'use strict';` in the compiled modules.
 
 Transpile ES6 modules and concatenate them, recursively including modules
 referenced by `import` statements.
