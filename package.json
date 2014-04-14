@@ -20,7 +20,7 @@
     "commonjs"
   ],
   "dependencies": {
-    "es6-module-transpiler": "aexmachina/es6-grubby-module-transpiler",
+    "es6-grubby-module-transpiler": "aexmachina/es6-grubby-module-transpiler",
     "js-string-escape": "^1.0.0",
     "mkdirp": "^0.3.5",
     "broccoli-writer": "^0.1.1",
