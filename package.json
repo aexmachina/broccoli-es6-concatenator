@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "broccoli-es6-concatenator": "^0.1.6",
+    "es6-module-transpiler": "^0.3.6"
+  }
+}
